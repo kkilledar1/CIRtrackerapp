@@ -28,18 +28,18 @@ def webhook():
     return r
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") != "shipping.cost":
+    if req.get("result").get("action") != "CIR.status":
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    zone = parameters.get("shipping-zone")
+    CIRid = parameters.get("CIRid")
 
-    cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500}
+    CIRdb = {'1009':Approved, '500':Cancelled, '901':Implemented, '1276':Analysis, '1999':Request submitted}
 
-    speech = "The cost of shipping to " + zone + " is " + str(cost[zone]) + " euros."
+    status = "The status of " + CIRid + " is " + str(CIRdb)"
 
     print("Response:")
-    print(speech)
+    print(status)
 
     return {
         "speech": speech,
