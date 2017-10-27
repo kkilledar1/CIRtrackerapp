@@ -28,15 +28,15 @@ def webhook():
     return r
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") != "CIR.status":
+    if req.get("result").get("action") != "CheckCIRstatus":
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
     CIRid = parameters.get("CIRid")
 
-    CIRdb = {'1009':Approved, '500':Cancelled, '901':Implemented, '1276':Analysis, '1999':Request submitted}
+    CIRstatus = {'1009':Approved, '500':Cancelled, '901':Implemented, '1276':Analysis, '1999':Request submitted}
 
-    status = "The status of " + CIRid + " is " + str(CIRdb)"
+    status = "The status of " + CIRid + " is " + str(CIRstatus)"
 
     print("Response:")
     print(status)
