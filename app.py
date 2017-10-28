@@ -32,11 +32,11 @@ def makeWebhookResult(req):
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    CIRid = parameters.get("CIRid")
+    CIRid = parameters.get("$CIRid")
 
     CIRstatus = {'1009':Approved, '500':Cancelled, '901':Implemented, '1276':Analysis, '1999':Request submitted}
 
-    status = "The status of " + CIRid + " is " + str(CIRstatus)"
+    speech = "The status of " + CIRid + " is " + str(CIRstatus)"
 
     print("Response:")
     print(status)
@@ -44,7 +44,7 @@ def makeWebhookResult(req):
     return {
         "speech": speech,
         "displayText": speech,
-        CIRstatus,
+        "CIRstatus",
         #"data": {},
         # "contextOut": [],
         "source": "apiai-CIR-status"
