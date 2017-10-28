@@ -44,9 +44,8 @@ def makeWebhookResult(req):
     return {
         "speech": speech,
         "displayText": speech,
-        "CIRstatus",
         #"data": {},
-        # "contextOut": [],
+        "contextOut": [CIRstatus],
         "source": "apiai-CIR-status"
     }
 
