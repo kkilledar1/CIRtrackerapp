@@ -43,7 +43,7 @@ def makeWebhookResult(req):
     #print(status)
 
     return {
-        "speech": speech,
+        #"speech": speech,
         "displayText": response,
         #"data": {},
         "contextOut": CIRstatus_res,
