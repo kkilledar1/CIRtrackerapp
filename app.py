@@ -34,7 +34,8 @@ def makeWebhookResult(req):
     parameters = result.get("parameters")
     CIRid = parameters.get("$CIRid")
 
-    CIRstatus = {'1009':Approved, '500':Cancelled, '901':Implemented, '1276':Analysis, '1999':Request submitted}
+    #CIRstatus = {'1009':Approved, '500':Cancelled, '901':Implemented, '1276':Analysis, '1999':Request submitted}
+    CIRstatus = "Approved"
 
     speech = "The status of " + CIRid + " is " + str(CIRstatus)"
 
