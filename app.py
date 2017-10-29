@@ -39,7 +39,7 @@ def makeWebhookResult(req):
 
     #speech = "The status of " + CIRid + " is " + str(CIRstatus)"
 
-    print("Response:")
+    #print("Response:")
     #print(status)
 
     return {
