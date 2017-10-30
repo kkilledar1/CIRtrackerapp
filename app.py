@@ -43,8 +43,8 @@ def makeWebhookResult(req):
     #print(status)
     print(speech)
     
-    return CIRstatus_res
-   
+    data = result.json()
+       
     return {
         "speech": speech,
         "displayText": speech,
@@ -52,11 +52,11 @@ def makeWebhookResult(req):
         "contextOut": CIRstatus_res,
         "source": "apiai-CIR-status"
     }
-    data = result.json()
-    res = makeWebhookResult(data)
-    return res
+    
+    #res = makeWebhookResult(data)
+    #return res
 
-    return (JSON.stringify({ "speech": speech, "displayText": response }))
+    #return (JSON.stringify({ "speech": speech, "displayText": response }))
     
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
