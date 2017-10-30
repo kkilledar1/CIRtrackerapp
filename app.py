@@ -43,7 +43,7 @@ def makeWebhookResult(req):
     #print(status)
     print(speech)
     
-    data = result.json()
+   # data = result.json()
        
     return {
         "speech": speech,
