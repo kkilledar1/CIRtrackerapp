@@ -38,14 +38,14 @@ def makeWebhookResult(req):
     CIRstatus_res = "Approved"
 
     response= CIRstatus_res
-
+    speech = "The CIR status is " + CIRstatus_res
     print("Response:")
     #print(status)
 
     return CIRstatus_res
    
     return {
-        #"speech": speech,
+        "speech": speech,
         "displayText": response,
         #"data": {},
         "contextOut": CIRstatus_res,
