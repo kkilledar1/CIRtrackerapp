@@ -52,6 +52,8 @@ def makeWebhookResult(req):
         "source": "apiai-CIR-status"
     }
    
+    res = makeWebhookResult(response)
+    return res
     
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
