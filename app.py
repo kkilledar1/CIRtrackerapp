@@ -53,7 +53,7 @@ def makeWebhookResult(req):
         "source": "apiai-CIR-status"
     }
     data = result.json()
-    res = makeWebhookResult(data)
+    res = makeWebhookResult(response)
     return res
     
 if __name__ == '__main__':
