@@ -56,7 +56,7 @@ def makeWebhookResult(req):
     res = makeWebhookResult(data)
     return res
 
-    return ContentService.createTextOutput(JSON.stringify({ "speech": speech, "displayText": response })).setMimeType(ContentService.MimeType.JSON);
+    return (JSON.stringify({ "speech": speech, "displayText": response }))
     
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
