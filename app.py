@@ -42,6 +42,7 @@ def makeWebhookResult(req):
     #print("Response:")
     #print(status)
 
+    return $CIRstatus_res
     return {
         #"speech": speech,
         "displayText": response,
