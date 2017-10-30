@@ -42,6 +42,7 @@ def makeWebhookResult(req):
     print("Response:")
     #print(status)
     print(speech)
+    
     return CIRstatus_res
    
     return {
@@ -51,8 +52,8 @@ def makeWebhookResult(req):
         "contextOut": CIRstatus_res,
         "source": "apiai-CIR-status"
     }
-   
-    res = makeWebhookResult(response)
+    data = result.json()
+    res = makeWebhookResult(data)
     return res
     
 if __name__ == '__main__':
