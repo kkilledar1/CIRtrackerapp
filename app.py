@@ -39,10 +39,11 @@ def makeWebhookResult(req):
 
     response= CIRstatus_res
 
-    #print("Response:")
+    print("Response:")
     #print(status)
 
     return CIRstatus_res
+   
     return {
         #"speech": speech,
         "displayText": response,
