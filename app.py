@@ -46,20 +46,13 @@ def makeWebhookResult(req):
    
     return {
         "speech": speech,
-        "displayText": response,
+        "displayText": speech,
         #"data": {},
         "contextOut": CIRstatus_res,
         "source": "apiai-CIR-status"
     }
    
-     return res.jason {
-          "speech": speech,
-        "displayText": response,
-        #"data": {},
-        "contextOut": CIRstatus_res,
-        "source": "apiai-CIR-status"
-     }
-
+    
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
 
