@@ -31,8 +31,8 @@ def makeWebhookResult(req):
     if req.get("result").get("action") != "CheckCIRstatus":
         return {}
     result = req.get("result")
-    parameters = result.get("parameters")
-    CIRid = parameters.get("$CIRid")
+    #parameters = result.get("parameters")
+    #CIRid = parameters.get("$CIRid")
 
     #CIRstatus = {'1009':Approved, '500':Cancelled, '901':Implemented, '1276':Analysis, '1999':Request submitted}
     CIRstatus_res = "Approved"
