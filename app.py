@@ -52,7 +52,7 @@ def makeWebhookResult(req):
        # #"data": {},
         #"contextOut": CIRstatus_res,
         #"source": "apiai-CIR-status"
-    $}
+   # $}
     
     #res = makeWebhookResult(data)
     #return res
