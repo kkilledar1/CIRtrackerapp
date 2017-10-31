@@ -45,16 +45,15 @@ def makeWebhookResult(req):
     
    # data = result.json()
      
-   # return response
+   
     return {
        "speech": speech,
        "displayText": speech,
      #"data": {},
      "contextOut": CIRstatus,
-        "response",
      "source": "apiai-CIR-status"
     };
-    
+    return response
     #res = makeWebhookResult(data)
     #return res
 
