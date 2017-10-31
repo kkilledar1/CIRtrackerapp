@@ -19,13 +19,13 @@ def webhook():
     #print("Request:")
     #print(json.dumps(req, indent=4))
 
-    res = "Test"
+    #res = "Test"
 
    #res = json.dumps(res, indent=4)
     #print(res)
-    r = make_response(res)
-    r.headers['Content-Type'] = 'application/json'
-    return r
+    #r = make_response(res)
+    #r.headers['Content-Type'] = 'application/json'
+    #return r
 
 #def makeWebhookResult(req):
    # if req.get("result").get("action") != "CheckCIRstatus":
@@ -47,8 +47,8 @@ def webhook():
      
    
     return {
-       "speech": r,
-       "displayText": r,
+       "speech": "Test",
+       "displayText": "Test",
         #"data": {},
      #"contextOut": CIRstatus_res,
      #"source": "apiai-CIR-status"
