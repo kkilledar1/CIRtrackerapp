@@ -45,7 +45,7 @@ def makeWebhookResult(req):
     
    # data = result.json()
        
-    return {
+    return Response::json {
         "speech": speech,
         "displayText": speech,
         #"data": {},
