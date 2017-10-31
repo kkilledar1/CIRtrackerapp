@@ -46,7 +46,7 @@ def makeWebhookResult(req):
    # data = result.json()
      
    # return response
-    return Results.json ({
+    return result.json ({
        "speech": speech,
        "displayText": speech,
      #"data": {},
