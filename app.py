@@ -1,71 +1,39 @@
-#!/usr/bin/env python
+<?php
 
-import urllib
-import json
-import os
+$method =$_Server['REQUEST_METHOD'];
 
-from flask import Flask
-from flask import request
-from flask import make_response
+if($method="POST){
+	$requestBody= file_get_contents ('php://input');
+	$jason=json_decode($requestBody);
 
-# Flask app should start in global layout
-app = Flask(__name__)
+	$Text=$json->result->parameters->Text;
+ 
+         switch ($Text) {
+           case 'hi':
+        	$speech ="Hi,Nice to meet you";
+			break;
 
-@app.route('/webhook', methods=['POST'])
-def webhook():
-   Print ("test")
-    #req = request.get_json(silent=True, force=True)
+		case 'bye'
+			$speech ="Bye,good night";
+			break;
 
-    #print("Request:")
-    #print(json.dumps(req, indent=4))
+		default:
+			$speech = "sorry, I did not get that"
+			break;
+	}
 
-    #res = "Test"
 
-   #res = json.dumps(res, indent=4)
-    #print(res)
-    #r = make_response(res)
-    #r.headers['Content-Type'] = 'application/json'
-    #return r
+        $response = new \stdClass ();
+        $response->speech ="";
+	$response->displayText ="";
+	$response->source ="webhook";
+	echo json_encode($response);
 
-#def makeWebhookResult(req):
-   # if req.get("result").get("action") != "CheckCIRstatus":
-        #return {}
-   # result = req.get("result")
-    #parameters = result.get("parameters")
-    #CIRid = parameters.get("$CIRid")
+}
+else
+{
+echo "Method not allwoed"
+}
 
-    #CIRstatus = {'1009':Approved, '500':Cancelled, '901':Implemented, '1276':Analysis, '1999':Request submitted}
-    #CIRstatus_res = "Approved"
 
-    #response= CIRstatus_res
-   # speech = "The CIR status is " + CIRstatus_res
-    #print("Response:")
-    #print(status)
-    #print(speech)
-    
-     #data = result.json()
-     
-   
-   # return {
-      # "speech": "Test",
-      # "displayText": "Test",
-        #"data": {},
-     #"contextOut": CIRstatus_res,
-     #"source": "apiai-CIR-status"
-    #};
-    #return response
-    #res = makeWebhookResult(data)
-    #return res
-
-    #return (JSON.stringify({ "speech": speech, "displayText": response }))
-    
-#if __name__ == '__main__':
-  #  port = int(os.getenv('PORT', 5000))
-
-    #print "Starting app on port %d" % port
-
-    #app.run(debug=True, port=port, host='0.0.0.0')
-    
-    #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-################################################################
+?>
