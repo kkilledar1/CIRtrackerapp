@@ -44,14 +44,15 @@ def makeWebhookResult(req):
     print(speech)
     
    # data = result.json()
-       
-    return Response::json {
-        "speech": speech,
-        "displayText": speech,
-        #"data": {},
-        "contextOut": CIRstatus_res,
-        "source": "apiai-CIR-status"
-    }
+     
+    return response
+    #return Response::json {
+     #   "speech": speech,
+      #  "displayText": speech,
+       # #"data": {},
+        #"contextOut": CIRstatus_res,
+        #"source": "apiai-CIR-status"
+    $}
     
     #res = makeWebhookResult(data)
     #return res
