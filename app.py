@@ -46,13 +46,13 @@ def webhook():
      #data = result.json()
      
    
-    return {
-       "speech": "Test",
-       "displayText": "Test",
+   # return {
+      # "speech": "Test",
+      # "displayText": "Test",
         #"data": {},
      #"contextOut": CIRstatus_res,
      #"source": "apiai-CIR-status"
-    };
+    #};
     #return response
     #res = makeWebhookResult(data)
     #return res
