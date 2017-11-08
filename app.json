@@ -4,13 +4,7 @@
   "repository": "https://github.com/kkilledar1/CIRtrackerapp",
   "keywords": ["api.ai", "natural language"]
   
-   "require": {
-        "php": "^5.2|^7.0",
-        "ext-mbstring": "*",
-        "ext-xml": "*",
-        "ext-xmlwriter": "*"
-               },
-   
+  
     "autoload": {
                "psr-0": {
             "PHPExcel": "Classes/"
