@@ -1,7 +1,19 @@
 {
-  "name": "API.AI Cross ref check Webhook",
-  "description": "API.AI Cross check Webhook Sapmple",
+  "name": "Read excel data Webhook",
+  "description": "Read excel data Webhook Sapmple",
   "repository": "https://github.com/kkilledar1/CIRtrackerapp",
-  "logo": "http://xvir.github.io/img/apiai.png",
   "keywords": ["api.ai", "natural language"]
+  
+   "require": {
+        "php": "^5.2|^7.0",
+        "ext-mbstring": "*",
+        "ext-xml": "*",
+        "ext-xmlwriter": "*"
+               },
+   
+    "autoload": {
+               "psr-0": {
+            "PHPExcel": "Classes/"
+        }
+    }
 }
